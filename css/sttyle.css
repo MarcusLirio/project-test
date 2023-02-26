@@ -184,11 +184,12 @@ width: 300px;
     font-weight: bold;
 }
 button{
-    width:150px;
-    height:42px ;
+    width:130px;
+    height:36px ;
+
 color: black;
 background-color: rgb(247, 18, 18);
-border:none;
+border:5px;
 font-size:18px;
 }
 .siga-nos{
