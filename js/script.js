@@ -53,7 +53,7 @@ let listaProdutos = [
 ];
 
 function renderizarprodutos() {
-  let espaco = document.getElementById("produtos gamer");
+  let espaco = document.getElementById("produtosgamer");
 
   let template = "";
 
