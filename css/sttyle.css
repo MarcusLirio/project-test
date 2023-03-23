@@ -269,7 +269,7 @@ font-size:18px;
     .barras{
          display: inline-block;
        display:flex;
-       width: 100px;
+       width: 50px;
     }
     .posiçao-texto{
         width:50% ;
