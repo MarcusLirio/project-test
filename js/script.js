@@ -30,14 +30,13 @@ function slide() {
 //function mostrarpopup(){//
 //   window.alert("hello world")//
 //}
-let email = document.getElementById("campo email");
 
 function enviarEmail() {
-  let emailDigitado = email.Value;
-  console.log(emailDigitado);
+  const email = document.getElementById("frm1")
+  console.log(email);
 }
 
-let listaProdutos = [
+const listaProdutos = [
   {
     titulo: "pc gamer ",
     descriçao: "pc gamer",
@@ -52,7 +51,7 @@ let listaProdutos = [
   },
 ];
 
-function renderizarprodutos() {
+function renderizarProdutos() {
   let espaco = document.getElementById("produtosgamer");
 
   let template = "";
@@ -60,13 +59,12 @@ function renderizarprodutos() {
   for (let index = 0; index < listaProdutos.length; index++) {
     const produtos = listaProdutos[index];
 
-    template += ` <div id="produtos gamer" class="produtos">
+    template += `<div id="produtos gamer" class="produtos">
          <h2>Promoçao</h2> 
          <img src="img/pc.png" alt="foto do pc gamer em promoçao"width="200px">
          <h3>${produtos.titulo}</h3>
          <p>${produtos.titulo}</p>
-         </div>
-        `;
+         </div>`;
   }
 
   espaco.innerHTML = template;

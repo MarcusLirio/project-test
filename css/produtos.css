@@ -1,198 +1,318 @@
-*{
-    
+* {
+
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-header{
-    background-color: rgb(48, 130, 253);
-    height: 130px;
+
+:root {
+    --color-primary: #fff;
+    --color-secundary: #111;
+    --color-bg: rgb(48, 130, 253);
+    --color-bc: rgb(40, 104, 201);
+    --color-bt: rgb(16, 62, 133);
+    --color-g: rgb(199, 197, 197);
 }
-.container-grid{
-    width: 1200px;
-    margin: auto;
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-bt);
+    border-radius: 2px;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--color-bg);
+    height: 10vh;
+    box-shadow: 1px 1px 100px 25px var(--color-secundary);
+}
+
+.container-grid {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.container-grid a{
-    margin-top: 3%;
+
+.container-grid a img {
+    width: 20vh;
+    margin: 6px;
 }
-.menu a{
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 10px;
+}
+
+.menu a {
     color: black;
     text-decoration: none;
-    text-transform:uppercase;
-    font-family:'roboto',sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'roboto', sans-serif;
     font-size: 20px;
 }
-.menu{
-    width: 450px;
-    display: flex;
-    justify-content:space-around;
-    margin-left:35% ;
+
+.menu a:hover {
+    color: var(--color-primary);
 }
-.barras{
+
+.barras {
     width: 60px;
-    display:none;
-    padding:10%;
-   }
-   .posicionamento-header{
-       position: relative;
+    display: none;
+    padding: 10%;
 }
-footer{
-    background-color:  rgb(126, 9, 236);
+
+.posicionamento-header {
+    position: relative;
 }
-.rodape{
-    display:flex;
-    justify-content: space-between;
-  
-}
-.logo-rodape{
-    margin-top: 1,5%;
-}
-.links-footer{
-    color: black;
+
+.rodape {
     display: flex;
-    justify-content:flex-start;
-    margin-bottom:1%;
-width: 300px;
-}
-.links h2{
-    font-size:16px;
-    
-}
-.links a{
-    color:black;
-    text-decoration:none;
-}
-.links{
-    display:flex;
     justify-content: space-between;
+}
+
+.rodape ul li {
+    display: flex;
     flex-direction: column;
-    margin-left: 10%;
-  
-    
+    gap: 10px;
+    align-items: flex-start;
+    list-style: none;
 }
-.social {
-    color: black;
-    font-size:14px ;
-    margin-bottom:8px;
-    margin-right: 2%;
+
+.rodape a {
+    color: var(--color-g);
+    text-decoration: none;
+    font-size: 15px;
 }
-.social form{
+
+.rodape h2 {
+    color: var(--color-primary);
+    font-size: 15px;
+}
+
+.links-footer {
     display: flex;
-    margin-bottom:8px;
-} 
-.social input[type="email"]{
-    height:37px;
-    width:195px;
+    justify-content: flex-start;
+    gap: 10px;
 }
-.social input[type="email"] ::placeholder{
-    color:b8b3b3;
-    font-weight: bold;
-}
-button{
-    width:150px;
-    height:42px ;
-color: black;
-background-color: rgb(247, 18, 18);
-border:none;
-font-size:18px;
-}
-.siga-nos{
+
+.links {
     display: flex;
-    justify-content: space-between;
-    margin-top:8px;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
 }
-.siga-nos a{
-    margin:2%;
-}
-.mostruario{
+
+.mostruario {
     background-image: url(../img/jogos.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
     display: flex;
 }
-.produtos{
-    background:rgb(199, 197, 197) ;
-    display:flex;
+
+.produtos {
+    background: rgb(199, 197, 197);
+    display: flex;
     flex-wrap: wrap;
     align-content: space-around;
-    height:53%;
-    margin-top:10% ;
-margin-left: 5%;
-margin-right:5%;
-    box-shadow: 0px 0px 10px rgb(0,0,0),0px 0px 30px rgb(0,0,0);
-}
-.produtos p{
-padding-left:110px ;
-}
-.produtos h2{
-    padding-left:25%;
-    color: rgb(250, 12, 12);
-    text-shadow: 0px 0px 10px rgb(32, 32, 32),0px 0px 30px rgb(32, 32, 32);
-}
-@media screen and (max-width: 1200px) {
-    .container-grid{
-        width: 100%;
-    }  
-    header{
-        width:100%;
-     }
-     .menu{ 
-         width: 460px;
-    margin-left: 17%;
-        } 
-     .menu a{
-         width: 460px;
-         margin:10px;
-         margin-left:30px ;
-         font-size:15px;
-     }
-     .texto-banner p{
-    font-size:24px ;
-     }
-    .texto-banner a{
-    font-size:25px ;
-    margin-left:0% ;
-    margin-top: 3%;
-    }
-    .promocional{
-        display:none;
-    }
-    .produtos{
-    display:flex;
+    height: 53%;
+    margin-top: 10%;
     margin-left: 5%;
     margin-right: 5%;
-    width:200px ;
-    height:340px;
-    align-content: flex-start;
+    box-shadow: 0px 0px 10px var(--color-secundary), 0px 0px 30px var(--color-secundary);
+}
+
+.produtos p {
+    padding-left: 110px;
+}
+
+.produtos h2 {
+    padding-left: 25%;
+    color: rgb(250, 12, 12);
+    text-shadow: 0px 0px 10px rgb(32, 32, 32), 0px 0px 30px rgb(32, 32, 32);
+}
+
+footer {
+    background-color: rgb(126, 9, 236);
+}
+
+
+.logo-rodape {
+    margin-top: 1, 5%;
+}
+
+.social {
+    margin: 10px;
+}
+
+.social h2 {
+    font-size: 25px;
+}
+
+.social form {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.social input[type="email"] {
+    height: 37px;
+    width: 195px;
+}
+
+
+button {
+    width: 130px;
+    height: 36px;
+    color: var(--color-primary);
+    background-color: rgb(247, 18, 18);
+    border: 5px;
+    font-size: 18px;
+}
+
+.siga-nos {
+    display: flex;
+    gap: 20px;
+}
+
+.siga-nos h2 {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container-grid {
+        width: 100%;
     }
-    .social h2{
-    margin-bottom: 5px;
-    font-size:25px;
+
+    header {
+        width: 100%;
     }
-    .logo-rodape{
+
+    .menu {
+        width: 460px;
+        margin-left: 17%;
+    }
+
+    .menu a {
+        width: 460px;
+        margin: 10px;
+        margin-left: 30px;
+        font-size: 15px;
+    }
+
+    .texto-banner p {
+        font-size: 24px;
+    }
+
+    .texto-banner a {
+        font-size: 25px;
+        margin-left: 0%;
+        margin-top: 3%;
+    }
+
+    .promocional {
         display: none;
     }
-    
+
+    .produtos {
+        display: flex;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 200px;
+        height: 340px;
+        align-content: flex-start;
     }
-@media screen and (max-width: 1200px) {
-    .container-grid{
-        width: 100%;
-    }  
-    header{
-        width:100%;
-     }
-     .menu{ 
-         width: 460px;
-    margin-left: 17%;
-        } 
-     .menu a{
-         width: 460px;
-         margin:10px;
-         margin-left:30px ;
-         font-size:15px;
-     }
+
+    .social h2 {
+        margin-bottom: 5px;
+        font-size: 25px;
     }
+
+    .logo-rodape {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .container-grid {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 3%
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        right: 65px;
+        background-color: black;
+    }
+
+    .menu-ativo {
+        display: flex;
+    }
+
+    .menu a {
+        color: white;
+    }
+
+    .barras {
+        display: inline-block;
+        display: flex;
+        width: 50px;
+    }
+
+    .posiçao-texto {
+        width: 50%;
+    }
+
+    .texto-banner {
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    .texto-banner a {
+        font-size: 18px;
+    }
+
+    .produtos {
+        margin-left: 5%;
+        width: 245px;
+        margin-right: 10px;
+        display: flexbox;
+        justify-content: space-between;
+    }
+
+    .links-footer {
+        display: none;
+    }
+
+    .rodape {
+        justify-content: space-around;
+    }
+}
+
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 30% 50%
+    }
+
+    50% {
+        background-position: 25% 50%
+    }
+
+    100% {
+        background-position: 30% 50%
+    }
+}

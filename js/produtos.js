@@ -22,7 +22,7 @@ let listaProdutos = [
 ]
 
 
-function renderizarprodutos(){
+function renderizarProdutos(){
    let espaco = document.getElementById("produtos gamer")
 
 

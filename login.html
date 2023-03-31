@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
     <header>
         <div class="container-grid posicionamento-header">
@@ -17,11 +19,12 @@
                 <a href="login.html">login</a>
                 <a href="contato.html">contato</a>
             </nav>
-            <a href="#" onclick="mostrarmenu()" ><img class="barras" src="img/botao-de-menu.png" alt= "Menu de Barras" ></a>
+            <!-- <a href="#" onclick="mostrarmenu()"><img class="barras" src="img/botao-de-menu.png"
+                     alt="Menu de Barras"></a> -->
         </div>
-    </header> 
+    </header>
     <form>
-    
+
         <div class="campo-label">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="@email.com" [(ngModel)]="loginModel.email">
@@ -29,22 +32,32 @@
 
         <div class="campo-label">
             <label for="senha">Senha</label>
-            <input type="password" name="password" id="senha" placeholder="Sua senha aqui..." [(ngModel)]="loginModel.password">
+            <input type="password" name="password" id="senha" placeholder="Sua senha aqui..."
+                [(ngModel)]="loginModel.password">
         </div>
 
         <input id="botao-enviar" type="submit" value="Fazer Login">
     </form>
     <footer>
-        <div class="rodape container">
-            <div class="links-footer container">
-            <div class="links">
-                <h2>links úteis</h2>
-                <ul>
-                    <li><a href="#">inicio</a></li>
-                    <li><a href="#">produtos</a></li>
-                    <li><a href="#">jogos</a></li>
-                    <li><a href="#">acessorios</a></li>
-                </ul>
+        <div class="rodape">
+            <img class="logo-rodape" src="img/aba.png" alt="logo game" height="100px">
+            <div class="links-footer">
+                <div class="links">
+                    <h2>links úteis</h2>
+                    <ul>
+                        <li>
+                            <a href="#">inicio</a>
+                        </li>
+                        <li>
+                            <a href="#">produtos</a>
+                        </li>
+                        <li>
+                            <a href="#">jogos</a>
+                        </li>
+                        <li>
+                            <a href="#">acessorios</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="links">
                     <h2>Páginas</h2>
@@ -55,25 +68,23 @@
                         <li><a href="#">jogos</a></li>
                     </ul>
                 </div>
-                </div>
-                <img class="container logo-rodape" src="img/aba.png" alt="logo game" height="100px">
-                <div class="social">
+            </div>
+            <div class="social">
                 <h2>Faça parte do nosso clan !</h2>
-                <form action="C:\Users\LNV\Downloads\projeto-game-mania-main\projeto-game-mania-main\cadastro.html">
-                <!-- <input id="campo email" type="email" placeholder="E-mail">
-                <button onclick="enviaremail()">cadastrar</button> -->
+                <form id="frm1">
+                    <input id="email" type="email" placeholder="E-mail">
+                    <button type="submit" onclick="enviarEmail()">cadastrar</button>
                 </form>
                 <div class="siga-nos">
                     <h2>siga-nos em :</h2>
-                    <a href=""><img src="img/twitter-logo-1.png" width="50px" ></a>
-                    <a href=""><img src="img/inst.png" width="50px" ></a>
-                    <a href=""><img src="img/what.png" width="50px"></a>
+                    <a href=""><img src="img/twitter-logo-1.png" width="25px"></a>
+                    <a href=""><img src="img/inst.png" width="25px"></a>
+                    <a href=""><img src="img/what.png" width="25px"></a>
                 </div>
-    
-             </div>
-    
+            </div>
         </div>
     </footer>
     <script src="js/jquery-3.6.0.js"></script>
 </body>
+
 </html>

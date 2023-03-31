@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,43 +8,58 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/contato.css">
 </head>
+
 <body>
     <header>
         <div class="container-grid posicionamento-header">
-            <a href="index.html"><img src="img\aba.png" alt="logo do site" width="200px"></a>
+            <a href="/">
+                <img src="img\aba.png" alt="logo do site">
+            </a>
             <nav id="menu" class="menu">
                 <a href="index.html">inicio</a>
                 <a href="produtos.html">produtos</a>
                 <a href="login.html">login</a>
                 <a href="contato.html">contato</a>
             </nav>
-            <a href="#" onclick="mostrarmenu()" ><img class="barras" src="img/botao-de-menu.png" alt= "Menu de Barras" ></a>
+            <!-- <a href="#" onclick="mostrarmenu()"><img class="barras" src="img/botao-de-menu.png"
+                    alt="Menu de Barras"></a> -->
         </div>
     </header>
 
-    <div class="contato">
-        <a routerLink="home"><img src="img/1discord-.png" alt="discord" width="200px"></a>
-        <a routerLink="home"><img src="img/facebook-.png" alt="facebook" width="200px"></a>
-        <a routerLink="home"><img src="img/insta.png" alt="instagram" width="200px"></a>
-        <a routerLink="home"><img src="img/twitter-.png" alt="twitter" width="200px"></a>
-    </div>
-    <div class="caixadialogo">
-        <a>Contate-nos:</a>
-        <textarea  rows="10" cols="68" maxlength="500" name="comentarios"></textarea>
-    </div>
-    <input id="botao-enviar" type="submit" value="Enviar Mensagem">
+    <main>
+        <div class="contato">
+            <a routerLink="home"><img src="img/1discord-.png" alt="discord" ></a>
+            <a routerLink="home"><img src="img/facebook-.png" alt="facebook"></a>
+            <a routerLink="home"><img src="img/insta.png" alt="instagram" ></a>
+            <a routerLink="home"><img src="img/twitter-.png" alt="twitter"></a>
+        </div>
+        <div class="caixa-dialogo">
+            <label for="botao-enviar">Deixe uma Mensagem:</label>
+            <input id="botao-enviar" type="text" placeholder="text">
+            <button>Enviar Mensagem</button>
+        </div>
+    </main>
 
     <footer>
-        <div class="rodape container">
+        <div class="rodape">
+            <img class="logo-rodape" src="img/aba.png" alt="logo game" height="100px">
             <div class="links-footer">
-            <div class="links">
-                <h2>links úteis</h2>
-                <ul>
-                    <li><a href="#">inicio</a></li>
-                    <li><a href="#">produtos</a></li>
-                    <li><a href="#">jogos</a></li>
-                    <li><a href="#">acessorios</a></li>
-                </ul>
+                <div class="links">
+                    <h2>links úteis</h2>
+                    <ul>
+                        <li>
+                            <a href="#">inicio</a>
+                        </li>
+                        <li>
+                            <a href="#">produtos</a>
+                        </li>
+                        <li>
+                            <a href="#">jogos</a>
+                        </li>
+                        <li>
+                            <a href="#">acessorios</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="links">
                     <h2>Páginas</h2>
@@ -54,23 +70,23 @@
                         <li><a href="#">jogos</a></li>
                     </ul>
                 </div>
-                </div>
-                <img class="logo-rodape" src="img/aba.png" alt="logo game" height="100px">
-                <div class="social">
+            </div>
+            <div class="social">
                 <h2>Faça parte do nosso clan !</h2>
-                <form action="">
-                <input id="campo email" type="email" placeholder="E-mail">
-                <button onclick="enviaremail()">cadastrar</button>
+                <form id="frm1">
+                    <input id="email" type="email" placeholder="E-mail">
+                    <button type="submit" onclick="enviarEmail()">cadastrar</button>
                 </form>
                 <div class="siga-nos">
                     <h2>siga-nos em :</h2>
-                    <a href=""><img src="img/twitter-logo-1.png" width="50px" ></a>
-                    <a href=""><img src="img/inst.png" width="50px" ></a>
-                    <a href=""><img src="img/what.png" width="50px"></a>
+                    <a href=""><img src="img/twitter-logo-1.png" width="25px"></a>
+                    <a href=""><img src="img/inst.png" width="25px"></a>
+                    <a href=""><img src="img/what.png" width="25px"></a>
                 </div>
-             </div>
+            </div>
         </div>
     </footer>
     <script src="js/jquery-3.6.0.js"></script>
 </body>
+
 </html>
